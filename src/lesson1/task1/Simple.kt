@@ -2,7 +2,11 @@
 
 package lesson1.task1
 
-import kotlin.math.*
+import junit.framework.Assert.assertEquals
+import org.junit.Test
+import java.lang.Math.PI
+import java.lang.Math.sqrt
+//import kotlin.math.*
 
 /**
  * Пример
@@ -48,9 +52,9 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
 /**
  * Пример главной функции
  */
-fun main() {
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2")
+fun main(){
+    val result = thirdDigit(8)
+    println("В радианах это = $result")
 }
 
 /**
@@ -76,7 +80,11 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+fun angelInRadian(deg: Double, min: Double, sec: Double): Double
+{
+    val radian = PI/180 * (deg + (min + sec/60)/60)
+    return radian
+}
 
 /**
  * Тривиальная
